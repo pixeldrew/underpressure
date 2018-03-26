@@ -13,6 +13,7 @@ describe('arraySum', function() {
 
     it('should sum all the integers anywhere in an array and nested arrays', function() {
         expect(arraySum([1, 2, '3', [1, 3]])).to.equal(7);
+        expect(arraySum([1, [], '3', [1, 3]])).to.equal(5);
     });
 
 });
