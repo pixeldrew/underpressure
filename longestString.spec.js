@@ -8,4 +8,8 @@ describe('longestString', function() {
         expect(longestString(['', 'a'])).to.equal('a');
     });
 
+    it('should ignore empty arrays', function() {
+       expect(longestString([])).to.be.undefined;
+    });
+
 });
