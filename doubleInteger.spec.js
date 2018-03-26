@@ -1,15 +1,14 @@
-const assert = require('assert');
-
+const expect = require('chai').expect;
 const doubleInteger = require('./doubleInteger');
 
 describe('doubleInteger', function() {
 
     it('should double integers', function() {
-        assert.equal(doubleInteger(2), 4);
-        assert.equal(doubleInteger(10), 20);
-        assert.equal(doubleInteger(3), 6);
-        assert.equal(doubleInteger('a'), NaN);
-        assert.equal(doubleInteger(NaN), NaN);
+        expect(doubleInteger(2)).to.equal(4);
+        expect(doubleInteger(10)).to.equal(20);
+        expect(doubleInteger(3)).to.equal(6);
+        expect(doubleInteger('a')).to.be.NaN;
+        expect(doubleInteger(NaN)).to.be.NaN;
     });
 
 });

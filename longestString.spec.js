@@ -1,12 +1,11 @@
-const assert = require('assert');
-
+const expect = require('chai').expect;
 const longestString = require('./longestString');
 
 describe('longestString', function() {
 
     it('should get the longest string from an array', function() {
-        assert.equal(longestString(['joke', 'a really long string', 'another', 'fresh', 'hamburger']), 'a really long string');
-        assert.equal(longestString(['', 'a']), 'a');
+        expect(longestString(['joke', 'a really long string', 'another', 'fresh', 'hamburger'])).to.equal('a really long string');
+        expect(longestString(['', 'a'])).to.equal('a');
     });
 
 });

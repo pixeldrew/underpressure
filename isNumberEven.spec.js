@@ -1,21 +1,16 @@
-const assert = require('assert');
-
+const expect = require('chai').expect;
 const isNumberEven = require('./isNumberEven');
 
 describe('isNumberEven', function() {
 
     it('should be true if number is even', function() {
-        assert.equal(isNumberEven(2), true);
-        assert.equal(isNumberEven(10), true);
+        expect(isNumberEven(2)).to.be.true;
+        expect(isNumberEven(10)).to.be.true;
     });
 
     it('should be false if number is odd', function() {
-        assert.equal(isNumberEven(3), false);
-        assert.equal(isNumberEven(9), false);
+        expect(isNumberEven(3)).to.be.false;
+        expect(isNumberEven(9)).to.be.false;
     });
 
-    it('should be false if not number', function() {
-        assert.equal(isNumberEven('b'), false);
-        assert.equal(isNumberEven([]), false);
-    });
 });

@@ -1,19 +1,18 @@
-const assert = require('assert');
-
+const expect = require('chai').expect;
 const arraySum = require('./arraySum');
 
 describe('arraySum', function() {
 
     it('should sum all integers', function() {
-        assert.equal(arraySum([1, 2]), 3);
+        expect(arraySum([1, 2])).to.equal(3);
     });
 
     it('should sum only integers', function() {
-       assert.equal(arraySum['1', 2, 3, 9], 14);
+       expect(arraySum(['1', 2, 3, 9])).to.equal(14);
     });
 
     it('should sum all the integers anywhere in an array and nested arrays', function() {
-        assert.equal(arraySum([1, 2, '3', [1, 3]]), 7);
+        expect(arraySum([1, 2, '3', [1, 3]])).to.equal(7);
     });
 
 });
